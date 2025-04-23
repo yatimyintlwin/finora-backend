@@ -9,6 +9,6 @@ public class Expense {
     private String id;
     private LocalDateTime date;
     private String name;
-    private String type;
+    private Type type;
     private double amount;
 }
