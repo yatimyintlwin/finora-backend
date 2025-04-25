@@ -1,5 +1,6 @@
 package com.finora.backend.domain.dto;
 
+import com.finora.backend.domain.enums.Type;
 import lombok.*;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbPartitionKey;
@@ -19,7 +20,7 @@ public class Expense {
     private String date;     // YYYY-MM-DD
     private String month;    // YYYY-MM
     private String week;     // YYYY-MM-WW
-    private String type;     // e.g. food, transportation
+    private Type type;     // e.g. food, transportation
     private String name;     // e.g. "Taxi Ride"
     private Double amount;   // e.g. 12.5
 }

@@ -1,6 +1,7 @@
 package com.finora.backend.utils;
 
 import com.finora.backend.domain.ExpenseDTO;
+import com.finora.backend.domain.enums.Type;
 import com.finora.backend.domain.dto.Expense;
 
 import java.time.LocalDate;
@@ -23,7 +24,7 @@ public class ExpenseUtils {
                 .toList();
     }
 
-    public static List<Expense> createExpenseVariantsWithUuid(String uuid, String date, String type, String name, Double amount) {
+    public static List<Expense> createExpenseVariantsWithUuid(String uuid, String date, Type type, String name, Double amount) {
         LocalDate parsedDate = LocalDate.parse(date); // assumes format YYYY-MM-DD
         String month = date.substring(0, 7); // YYYY-MM
         String week = month + "-W" + getWeekOfMonth(parsedDate); // e.g. 2025-04-W1
@@ -85,7 +86,7 @@ public class ExpenseUtils {
         );
     }
 
-    public static List<Expense> createExpenseVariants(String date, String type, String name, Double amount) {
+    public static List<Expense> createExpenseVariants(String date, Type type, String name, Double amount) {
         String uuid = UUID.randomUUID().toString();
         return createExpenseVariantsWithUuid(uuid, date, type, name, amount);
     }

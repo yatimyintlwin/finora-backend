@@ -1,5 +1,6 @@
 package com.finora.backend.domain;
 
+import com.finora.backend.domain.enums.Type;
 import lombok.Data;
 
 @Data
