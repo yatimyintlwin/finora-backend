@@ -2,12 +2,10 @@ package com.finora.backend.domain;
 
 import lombok.Data;
 
-import java.time.LocalDateTime;
-
 @Data
-public class Expense {
-    private String id;
-    private LocalDateTime date;
+public class ExpenseDTO {
+    private String id;        // UUID
+    private String date;      // YYYY-MM-DD
     private String name;
     private String type;
     private double amount;
